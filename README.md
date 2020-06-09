@@ -33,7 +33,7 @@ AliexpressAPI::Base.activate_session "token"
 调用 API
 ```ruby
 # 创建订单
-AliexpressAPI::Order.create!(
+AliexpressAPI::DsOrder.create!(
     logistics_address: {
       address: "china"
     },
@@ -46,10 +46,10 @@ AliexpressAPI::Order.create!(
 )
 
 # 获取订单信息
-AliexpressAPI::Order.find(300518642)
+AliexpressAPI::DsOrder.find(300518642)
 
 # 获取物流信息
-AliexpressAPI::Logistic.tracking_info(
+AliexpressAPI::DsLogistic.tracking_info(
   logistics_no: "330211",
   out_ref: "300518642",
   service_name: "EMS",
